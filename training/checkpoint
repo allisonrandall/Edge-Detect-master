@@ -1,0 +1,2 @@
+model_checkpoint_path: "pi_queue_model_weights_26features_5epochs.tf"
+all_model_checkpoint_paths: "pi_queue_model_weights_26features_5epochs.tf"
