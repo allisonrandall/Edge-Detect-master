@@ -1,5 +1,9 @@
+*This repository is for personal uses. I do not own the original work.*
+
+Original Work:
+https://github.com/racsa-lab/Edge-Detect
 # Edge-Detect
-Repository for IEEE CCNC'21 paper titled "[Edge-Detect: Edge-centric Network Intrusion Detection using Deep Neural
+IEEE CCNC'21 paper titled "[Edge-Detect: Edge-centric Network Intrusion Detection using Deep Neural
 Network](https://edas.info/showManuscript.php?type=stamped-e&m=1570662712&ext=pdf&title=PDF+file)"
 # Citation
 Please cite if you find our work useful
