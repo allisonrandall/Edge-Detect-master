@@ -1,4 +1,4 @@
-*This repository is for personal uses. I do not own the original work. Please refer to the original if you wish to use this project.*
+*This repository is for personal study uses. I do not own the original work. Please refer to the original if you wish to use this project.*
 
 Original Work:
 https://github.com/racsa-lab/Edge-Detect
