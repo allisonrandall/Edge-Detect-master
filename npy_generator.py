@@ -1,18 +1,36 @@
-# from matplotlib import pyplot
-# from tensorflow.keras.models import Sequential
-# from tensorflow.keras.callbacks import ModelCheckpoint, TensorBoard
-import sys
-
+from math import sqrt
+from numpy import concatenate
 import numpy as np
+from matplotlib import pyplot
+from pandas import read_csv
+from pandas import DataFrame
+from pandas import concat
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import mean_squared_error
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, BatchNormalization, Dropout, Flatten, Conv1D
+# from tensorflow.keras.layers import CuDNNLSTM
+from tensorflow.keras.callbacks import ModelCheckpoint, TensorBoard
+import tensorflow as tf
 import pandas as pd
+from sklearn.preprocessing import minmax_scale
+import sys
+ 
+ 
+import keras
+import numpy as np
+import sklearn.metrics as sklm
+
+
+
+
 
 # convert series to supervised learning
-timestep = int(sys.argv[1])
-# run from terminal with 'python npy_generator.py [timestep_value]' ie 'python npy_generator.py 5'
-# timestep=int(1)
+# timestep=int(sys.argv[1])
+timestep=int(128)
 # load dataset
-
-dataset = pd.read_csv('training_6.csv', header=0, dtype={15: str, 16: str})
+dataset = pd.read_csv('training.csv', header=0)
 dataset=dataset.dropna()
 dataset=dataset.fillna(method="ffill")
 dataset = dataset.apply(pd.to_numeric,errors="coerce")
@@ -34,7 +52,7 @@ train = values[:, :,:]
 train_X=train[:,:,:-1]
 
 
-dataset = pd.read_csv('testing_6.csv', header=0, dtype={15: str, 16: str})
+dataset = pd.read_csv('testing.csv', header=0)
 dataset=dataset.dropna()
 dataset=dataset.fillna(method="ffill")
 dataset = dataset.apply(pd.to_numeric,errors="coerce")
